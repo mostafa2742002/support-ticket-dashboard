@@ -54,4 +54,16 @@ export class App {
   showAllTickets() {
     this.tableMessage = 'Showing all tickets...';
   }
+
+
+  getFilteredTickets() {
+    if (!this.searchText.trim()) {
+      return this.recentTickets;
+    }
+
+    return this.recentTickets.filter(ticket =>
+      ticket.title.toLowerCase().includes(this.searchText.toLowerCase())
+    );
+  }
+  
 }

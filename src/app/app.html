@@ -49,7 +49,7 @@
       </thead>
 
       <tbody>
-        @for (ticket of recentTickets; track ticket.id) {
+        @for (ticket of getFilteredTickets(); track ticket.id) {
           <tr>
             <td>{{ ticket.title }}</td>
             <td>
