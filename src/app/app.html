@@ -17,4 +17,50 @@
       </div>
     }
   </section>
+
+  <section class="table-card">
+    <div class="table-header">
+      <h2>Recent Tickets</h2>
+      <button>View All</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Customer</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (ticket of recentTickets; track ticket.id) {
+          <tr>
+            <td>{{ ticket.title }}</td>
+            <td>
+              <span
+                class="badge"
+                [class.badge-high]="ticket.priority === 'HIGH'"
+                [class.badge-medium]="ticket.priority === 'MEDIUM'"
+              >
+                {{ ticket.priority }}
+              </span>
+            </td>
+            <td>
+              <span
+                class="badge"
+                [class.badge-open]="ticket.status === 'OPEN'"
+                [class.badge-progress]="ticket.status === 'IN_PROGRESS'"
+              >
+                {{ ticket.status }}
+              </span>
+            </td>
+            <td>{{ ticket.customer }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
 </div>

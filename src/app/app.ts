@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class App {
   userName = 'Mostafa';
 
-   stats = [
+  stats = [
       {
         label: 'Open Tickets',
         value: 12
@@ -23,4 +23,28 @@ export class App {
         value: 28
       }
     ];
+
+  recentTickets = [
+    {
+      id: 1,
+      title: 'Login issue',
+      priority: 'HIGH',
+      status: 'OPEN',
+      customer: 'Ahmed Hassan'
+    },
+    {
+      id: 2,
+      title: 'Payment failed',
+      priority: 'HIGH',
+      status: 'OPEN',
+      customer: 'Sara Ali'
+    },
+    {
+      id: 3,
+      title: 'Cannot reset password',
+      priority: 'MEDIUM',
+      status: 'IN_PROGRESS',
+      customer: 'Omar Khaled'
+    }
+  ];
 }
