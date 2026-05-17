@@ -47,4 +47,11 @@ export class App {
       customer: 'Omar Khaled'
     }
   ];
+
+  tableMessage = '';
+  searchText = '';
+
+  showAllTickets() {
+    this.tableMessage = 'Showing all tickets...';
+  }
 }

@@ -165,3 +165,38 @@ tbody tr:hover {
   background: #ede9fe;
   color: #6d28d9;
 }
+
+.table-message {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.search-preview {
+  margin: 0 0 16px;
+  color: #6b7280;
+  font-size: 14px;
+}

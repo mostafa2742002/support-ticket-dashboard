@@ -21,8 +21,22 @@
   <section class="table-card">
     <div class="table-header">
       <h2>Recent Tickets</h2>
-      <button>View All</button>
+      <button (click)="showAllTickets()">View All</button>
     </div>
+
+    @if (tableMessage) {
+      <p class="table-message">{{ tableMessage }}</p>
+    }
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search tickets by title..."
+        (input)="searchText = $any($event.target).value"
+      />
+    </div>
+
+    <p class="search-preview">Search value: {{ searchText }}</p>
 
     <table>
       <thead>
