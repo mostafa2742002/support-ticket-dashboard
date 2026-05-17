@@ -10,19 +10,11 @@
   </section>
 
   <section class="stats-grid">
-    <div class="stat-card">
-      <p>Open Tickets</p>
-      <h2>12</h2>
-    </div>
-
-    <div class="stat-card">
-      <p>In Progress</p>
-      <h2>5</h2>
-    </div>
-
-    <div class="stat-card">
-      <p>Resolved</p>
-      <h2>28</h2>
-    </div>
+    @for (stat of stats; track stat.label){
+      <div class="stat-card">
+        <p>{{ stat.label }}</p>
+        <h2>{{ stat.value }}</h2>
+      </div>
+    }
   </section>
 </div>

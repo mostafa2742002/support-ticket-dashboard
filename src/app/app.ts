@@ -9,7 +9,18 @@ import { Component } from '@angular/core';
 export class App {
   userName = 'Mostafa';
 
-  openTickets = 12;
-  inProgressTickets = 5;
-  resolvedTickets = 28;
+   stats = [
+      {
+        label: 'Open Tickets',
+        value: 12
+      },
+      {
+        label: 'In Progress',
+        value: 5
+      },
+      {
+        label: 'Resolved',
+        value: 28
+      }
+    ];
 }
