@@ -38,6 +38,8 @@
 
     <p class="search-preview">Search value: {{ searchText }}</p>
 
+
+  @if (getFilteredTickets().length > 0) {
     <table>
       <thead>
         <tr>
@@ -52,6 +54,7 @@
         @for (ticket of getFilteredTickets(); track ticket.id) {
           <tr>
             <td>{{ ticket.title }}</td>
+
             <td>
               <span
                 class="badge"
@@ -61,6 +64,7 @@
                 {{ ticket.priority }}
               </span>
             </td>
+
             <td>
               <span
                 class="badge"
@@ -70,11 +74,21 @@
                 {{ ticket.status }}
               </span>
             </td>
+
             <td>{{ ticket.customer }}</td>
           </tr>
         }
       </tbody>
     </table>
+  } @else {
+    <div class="empty-state">
+      <h3>No tickets found</h3>
+      <p>Try searching with another title.</p>
+    </div>
+  }
+
+
+
   </section>
 
 </div>
